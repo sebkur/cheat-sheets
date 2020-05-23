@@ -10,6 +10,10 @@ Test only some modules:
 
     mvn test --pl odfdom,validator
 
+Show dependency tree:
+
+    mvn dependency:tree
+
 ## Maven lifecycles
 * validate - validate the project is correct and all necessary information is available
 * compile - compile the source code of the project
