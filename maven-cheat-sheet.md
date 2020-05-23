@@ -18,3 +18,20 @@ Test only some modules:
 * verify - run any checks on results of integration tests to ensure quality criteria are met
 * install - install the package into the local repository, for use as a dependency in other projects locally
 * deploy - done in the build environment, copies the final package to the remote repository for sharing with other developers and projects.
+
+## More useful commands
+
+Package a module without running its tests:
+
+    mvn package -Dmaven.test.skip=true -pl generator/schema2template
+
+Execute a main class:
+
+    mvn exec:java -pl generator/schema2template
+        -Dexec.mainClass=schema2template.example.odf.PathPrinter
+
+Execute a main class and specify parameters:
+
+    mvn exec:java -pl generator/schema2template
+        -Dexec.mainClass=schema2template.example.odf.PathPrinter
+        -Dexec.args="argument1"
